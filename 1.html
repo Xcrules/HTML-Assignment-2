@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coffee Menu — Flex + Grid (Color Names Only)</title>
+
+  <style>
+    :root{
+      --card-bg: white;
+      --text-muted: dimgray;
+      --accent: sienna;
+      --price-color: firebrick;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      margin: 0;
+      background: url('/mnt/data/1.jpg') center top / cover no-repeat, floralwhite;
+    }
+
+    .container{
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border: solid 1px lightgray;
+      border-radius: 10px;
+    }
+
+    h1{
+      text-align: center;
+      color: sienna;
+      margin: 0 0 20px;
+      font-family: Georgia, serif;
+    }
+
+    .menu-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card{
+      background: var(--card-bg);
+      padding: 18px;
+      border-radius: 10px;
+      border: solid 1px gainsboro;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 120px;
+    }
+
+    .card-top{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .card-top h3{
+      margin: 0;
+      font-size: 18px;
+      color: saddlebrown;
+    }
+
+    .price{
+      font-weight: bold;
+      color: var(--price-color);
+      font-size: 15px;
+    }
+
+    .card p{
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .card-footer{
+      display: flex;
+      gap: 10px;
+    }
+
+    .tag{
+      background: wheat;
+      color: sienna;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 960px){
+      .menu-grid{
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px){
+      .menu-grid{
+        grid-template-columns: 1fr;
+      }
+      .container{
+        padding: 20px;
+        margin: 20px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Our Coffee Menu</h1>
+
+    <div class="menu-grid">
+
+      <div class="card">
+        <div class="card-top">
+          <h3>Cappuccino</h3>
+          <div class="price">$49</div>
+        </div>
+        <p>Smooth milk and espresso with a creamy finish.</p>
+        <div class="card-footer">
+          <span class="tag">Hot</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>Americano</h3>
+          <div class="price">$49</div>
+        </div>
+        <p>Light and classic with a clean flavour.</p>
+        <div class="card-footer">
+          <span class="tag">Classic</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>Espresso</h3>
+          <div class="price">$49</div>
+        </div>
+        <p>Strong and rich shot for instant energy.</p>
+        <div class="card-footer">
+          <span class="tag">Strong</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>Macchiato</h3>
+          <div class="price">$49</div>
+        </div>
+        <p>Espresso with just a touch of milk.</p>
+        <div class="card-footer">
+          <span class="tag">Rich</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>Mocha</h3>
+          <div class="price">$49</div>
+        </div>
+        <p>Chocolate blended with coffee for a sweet kick.</p>
+        <div class="card-footer">
+          <span class="tag">Sweet</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>Latte</h3>
+          <div class="price">$49</div>
+        </div>
+        <p>Mild coffee with creamy steamed milk.</p>
+        <div class="card-footer">
+          <span class="tag">Creamy</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>Piccolo Latte</h3>
+          <div class="price">$49</div>
+        </div>
+        <p>Mini latte with stronger espresso taste.</p>
+        <div class="card-footer">
+          <span class="tag">Mini</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>Ristretto</h3>
+          <div class="price">$49</div>
+        </div>
+        <p>Shorter, sweeter espresso extraction.</p>
+        <div class="card-footer">
+          <span class="tag">Bold</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3>Affogato</h3>
+          <div class="price">$49</div>
+        </div>
+        <p>Vanilla ice cream topped with espresso.</p>
+        <div class="card-footer">
+          <span class="tag">Dessert</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
